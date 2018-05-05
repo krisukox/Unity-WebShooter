@@ -4,7 +4,8 @@
 -You can shot web  
 -You have to avoid ceiling, floor and any barriers  
 -You need to score more points!  
-https://youtu.be/GgOOjGeKBSs
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/GgOOjGeKBSs/0.jpg)](https://www.youtube.com/watch?v=GgOOjGeKBSs)
 
 ![screenshot](https://user-images.githubusercontent.com/38990293/39662545-542e0224-5063-11e8-9d26-3fe2b58f3005.jpg)
 
