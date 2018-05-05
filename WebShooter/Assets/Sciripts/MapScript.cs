@@ -40,7 +40,10 @@ public class MapScript : MonoBehaviour
 	
 	void Update ()
     {
-        if (Input.GetKeyUp("space") || MobileTouchController.IsTouchUp())
+        Touch touch = new Touch();
+        if (Input.touchCount > 0)
+            touch = Input.GetTouch(0);
+        if (Input.GetKeyUp("space") || touch.phase == TouchPhase.Ended)
         {
             MyHinge.connectedBody = null;
         }

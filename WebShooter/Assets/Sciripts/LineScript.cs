@@ -29,14 +29,18 @@ public class LineScript : MonoBehaviour
 	
 	void Update ()
     {
-        if (Input.GetKeyDown("space") || MobileTouchController.IsTouchDown())
+        Touch touch = new Touch();
+        touch.phase = TouchPhase.Canceled;
+        if(Input.touchCount > 0)
+            touch = Input.GetTouch(0);
+        if (Input.GetKeyDown("space") || touch.phase == TouchPhase.Began)
         {
             transform.eulerAngles = new Vector3(0, 0, -45);
             transform.localScale = new Vector3(1, 1, 1); 
             transform.localPosition = new Vector3(0.04f, 0.04f, 1);
             mySpriteRenderer.enabled = true;
         }
-        else if (Input.GetKeyUp("space") || MobileTouchController.IsTouchUp())
+        else if (Input.GetKeyUp("space") || touch.phase == TouchPhase.Ended)
         {
             mySpriteRenderer.enabled = false;
             transform.eulerAngles = new Vector3(0, 0, -45);
